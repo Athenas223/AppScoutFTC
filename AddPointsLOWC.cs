@@ -8,21 +8,18 @@ public class AddPointsLOWC : MonoBehaviour
 
     private void Start()
     {
-        AddLOW.onClick.AddListener(AddFourPoints);
+        AddLOW.onClick.AddListener(AddthreePoints);
     }
 
-    public void AddFourPoints()
+    public void AddthreePoints()
     {
-        // Verifica se o texto no InputField é um número inteiro válido
         if (int.TryParse(LOWInput.text, out int currentValue))
         {
-            // Adiciona cinco pontos ao valor atual e atualiza o InputField com o novo valor
             int newPoints = currentValue + 3;
             LOWInput.text = newPoints.ToString();
         }
         else
         {
-            // Se o texto não for um número inteiro válido, assume o valor inicial de 5
             LOWInput.text = "3";
         }
     }
